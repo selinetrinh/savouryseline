@@ -1,0 +1,925 @@
+.index-page {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'ZT Formom';
+    src: url('fonts/zt-formom.woff') format('woff'), url('fonts/zt-formom-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    opacity: 60%;
+    z-index: 1001;
+}
+
+.video-controls button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.logo {
+    position: fixed;
+    width: 25vw;
+    z-index: 1000;
+}
+
+
+/* menu and add to favourite */
+
+.top-right-icons {
+    position: fixed;
+    top: 10%;
+    right: 4%;
+    display: flex;
+    gap: 5vw;
+    z-index: 1000;
+}
+
+.icon {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+
+/* navigation buttons */
+
+.nav-buttons {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 150px;
+    align-items: center;
+}
+
+.nav-button {
+    width: 167.05px;
+    height: 69px;
+    border-radius: 34px;
+    background-color: #FFF4E4;
+    border: 2px solid #609569;
+    box-shadow: 3px 8px 0px #609569;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #609569;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button a {
+    text-decoration: none;
+    color: #609569;
+    font-size: inherit;
+    font-family: inherit;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #DFB81A;
+}
+
+.nav-button:hover a {
+    color: #FFF4E4;
+}
+
+
+/* inside menu bar */
+
+#menu-bar {
+    position: fixed;
+    top: 0;
+    right: -50vw;
+    width: 50vw;
+    height: 100vh;
+    background-color: #222223;
+    transition: right 0.5s ease-in-out;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+}
+
+.menu-content {
+    position: absolute;
+    top: 180px;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 80px;
+    color: #F4D760;
+    text-decoration: none;
+    line-height: 150px;
+    display: block;
+}
+
+.sub-menu {
+    padding-left: 60px;
+}
+
+.sub-item {
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 50px;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 80px;
+    display: block;
+}
+
+.sub-item:last-child {
+    line-height: 80px;
+}
+
+.menu-open {
+    right: 0 !important;
+}
+
+#home-icon {
+    position: absolute;
+    top: 70px;
+    left: 10%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#home-icon:hover {
+    transform: scale(1.2);
+}
+
+#close-menu {
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#close-menu:hover {
+    transform: scale(1.2);
+}
+
+.menu-bottom {
+    position: absolute;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.keep-in-touch {
+    font-family: 'Mali', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon-1 {
+    right: 70px;
+    width: 75px;
+    height: 70px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon-2 {
+    right: 70px;
+    width: 95px;
+    height: 67px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon-1:hover {
+    transform: scale(1.1);
+}
+
+.social-icon-2:hover {
+    transform: scale(1.1);
+}
+
+
+/* garnished rim */
+
+.rim-image {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 999;
+}
+
+.recipes-page {
+    margin: 0;
+    background-image: url('images/seline.png');
+    background-size: cover;
+    background-position: center calc(50% - 10vw);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.recipes-text {
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 170px;
+    text-transform: uppercase;
+    color: #609569;
+    -webkit-text-stroke: 2px #F4EFE8;
+    letter-spacing: 2px;
+}
+
+.bite-nav-button {
+    position: absolute;
+    left: 2%;
+    top: 45%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+    z-index: 1000;
+    width: 20%;
+    height: 69px;
+    border-radius: 34px;
+    background-color: #FFF4E4;
+    border: 2px solid #609569;
+    box-shadow: 3px 8px 0px #609569;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #609569;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2000;
+}
+
+.sip-nav-button {
+    position: absolute;
+    left: 2%;
+    top: 60%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+    z-index: 1000;
+    width: 20%;
+    height: 69px;
+    border-radius: 34px;
+    background-color: #FFF4E4;
+    border: 2px solid #609569;
+    box-shadow: 3px 8px 0px #609569;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #609569;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2000;
+}
+
+.bite-nav-button:hover {
+    background-color: #609569;
+    color: #FFF4E4;
+}
+
+.sip-nav-button:hover {
+    background-color: #609569;
+    color: #FFF4E4;
+}
+
+.bite-image {
+    position: fixed;
+    right: 20vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90vh;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bite-nav-button:hover+#bite-img {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.sip-image {
+    position: fixed;
+    left: 20vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 120vh;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sip-nav-button:hover+#sip-img {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.about-page {
+    margin: 0;
+    background-image: url('images/about_bg.jpg');
+    background-size: cover;
+    background-position: center calc(50% - 10vw);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#mobile-recipes-img-nav {
+    display: none;
+}
+
+.container {
+    height: 200vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    top: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 800px;
+}
+
+.envelope {
+    width: 100%;
+}
+
+.letter {
+    position: absolute;
+    width: 105%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    z-index: 2;
+}
+
+.letter.show {
+    opacity: 1;
+    transform: translateY(-30px);
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.about-social-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about-social-icon-1,
+.about-social-icon-2 {
+    width: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.about-social-icon-1:hover {
+    transform: scale(1.1);
+}
+
+.about-social-icon-2:hover {
+    transform: scale(1.1);
+}
+
+.have-a-bite-page {
+    margin: 0;
+    background-image: url('images/haveabite.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.inner-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+}
+
+.inner-line-left {
+    left: 10%;
+    top: 50%;
+    bottom: 10%;
+}
+
+.middle-left-text {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 150px;
+    font-family: 'ZT Formom', sans-serif;
+    color: #FFF1C2;
+}
+
+.bottom-left-text {
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-family: 'ZT Formom', sans-serif;
+    color: #FFF1C2;
+}
+
+.polaroid-container {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 20vh;
+    margin-top: 40vh;
+}
+
+.polaroid {
+    position: absolute;
+    width: 150px;
+    background: transparent;
+    transform: rotate(var(--rotate));
+    padding: 10px;
+    text-align: center;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.info-box {
+    background: white;
+    padding: 10px;
+    max-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+}
+
+.stars {
+    color: #000;
+    font-size: 14px;
+}
+
+.polaroid1 {
+    top: 5%;
+    left: 20%;
+    --rotate: -15deg;
+}
+
+.info1 {
+    top: 15%;
+    left: 30%;
+}
+
+.polaroid2 {
+    top: 15%;
+    left: 70%;
+    --rotate: 12deg;
+}
+
+.info2 {
+    top: 40%;
+    left: 50%;
+}
+
+.polaroid3 {
+    top: 40%;
+    left: 20%;
+    --rotate: -10deg;
+}
+
+.info3 {
+    top: 60%;
+    left: 30%;
+}
+
+.polaroid4 {
+    top: 60%;
+    left: 70%;
+    --rotate: 15deg;
+}
+
+.info4 {
+    top: 60%;
+    left: 55%;
+}
+
+.polaroid5 {
+    top: 90%;
+    left: 20%;
+    --rotate: 15deg;
+}
+
+.info5 {
+    top: 50%;
+    left: 40%;
+}
+
+
+/* music radio */
+
+.music-bar {
+    margin-top: 30vh;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.361);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    border-radius: 0px 0px 0 0;
+    color: #FFFFFF;
+    font-family: 'ZT Formom', sans-serif;
+}
+
+#song-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+    margin-right: 20px;
+}
+
+.music-info {
+    flex: 1;
+    text-align: left;
+}
+
+.song-name {
+    font-size: 24px;
+    font-family: 'zt-formom';
+}
+
+.song-artist {
+    font-size: 18px;
+    opacity: 0.8;
+    font-family: 'zt-formom';
+}
+
+#progress-bar {
+    position: relative;
+    display: flex;
+    flex: 4;
+    width: 50vw;
+    height: 5px;
+    margin: 0 20px;
+}
+
+.volume-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#volume-icon {
+    width: 80px;
+    height: auto;
+}
+
+button {
+    position: relative;
+    display: flex;
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.food-container {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+}
+
+.food-title {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.food-difficulty {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.food-stars {
+    color: black;
+}
+
+.food-stars span.filled {
+    color: black;
+}
+
+.food-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.food-main-content {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.food-left-column {
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.food-yellow-box {
+    background-color: #ffe370;
+    padding: 15px;
+    border-radius: 4px;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.food-yellow-box h3 {
+    margin-top: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.food-yellow-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.food-video-section {
+    flex: 2 1 400px;
+    background-color: #555;
+    border-radius: 4px;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.food-note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #333;
+}
+
+.have-a-bite-bg {
+    width: 100vw;
+    z-index: 0;
+    position: absolute;
+}
+
+
+/* mobile view */
+
+@media (max-width: 768px) {
+    .logo {
+        width: 50vw;
+    }
+    #menu-bar {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background-color: #222223;
+        transition: right 0.5s ease-in-out;
+        box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+    }
+    .menu-content {
+        top: 15vh;
+        left: 5%;
+    }
+    .keep-in-touch {
+        font-family: 'Mali', sans-serif;
+        font-weight: 500;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+    .menu-bottom {
+        left: 5%;
+    }
+    #home-icon {
+        left: 5%;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .recipes-page {
+        background-position: center;
+    }
+    .rim-image {
+        position: fixed;
+        top: 0;
+        width: 200vw;
+        height: auto;
+        z-index: 999;
+    }
+    .bite-nav-button {
+        position: static;
+        width: 80%;
+        margin: 10px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .sip-nav-button {
+        position: static;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .bite-image {
+        display: none;
+    }
+    .sip-image {
+        display: none;
+    }
+    .recipes-text {
+        display: none;
+    }
+    .mobile-spacer {
+        height: 50vh;
+    }
+    #mobile-recipes-img-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .mobile-bite-image {
+        margin-top: -250px;
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+    }
+    .mobile-sip-image {
+        margin-top: -250px;
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+    }
+    .middle-left-text {
+        font-size: 60px;
+        top: 25%;
+    }
+    .inner-line-left {
+        left: 10%;
+        top: 30%;
+        bottom: 10%;
+    }
+    .polaroid1,
+    .info1,
+    .polaroid2,
+    .info2,
+    .polaroid3,
+    .info3,
+    .polaroid4,
+    .info4,
+    .polaroid5,
+    .info5 {
+        position: static !important;
+        top: unset !important;
+        left: unset !important;
+        transform: none !important;
+        --rotate: 0deg;
+        margin: 1rem auto;
+    }
+    .polaroid-container {
+        gap: 2vh;
+    }
+    .music-bar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    }
+    #song-avatar {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+    .music-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .song-name {
+        font-size: 20px;
+    }
+    .song-artist {
+        font-size: 16px;
+    }
+    #progress-bar {
+        width: 80%;
+        margin: 10px 0;
+    }
+    .volume-container {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    #volume-icon {
+        width: 60px;
+    }
+    button {
+        font-size: 25px;
+        margin: 10px 5px;
+    }
+    .food-main-content {
+        flex-direction: column;
+    }
+    .food-video-section {
+        min-height: 250px;
+    }
+    .have-a-bite-bg {
+        height: 100vh;
+        z-index: 0;
+        position: absolute;
+    }
+}

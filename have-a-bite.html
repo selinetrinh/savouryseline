@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>savouryseline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="margin: 0; 
+    background-color: #F4EFE8;">
+
+    <img src="images/haveabite.jpg" alt="Have a Bite" class="have-a-bite-bg" />
+
+    <script src="songScript.js" defer></script>
+    <script src="script.js" defer></script>
+
+
+    <!-- garnished rim -->
+    <img src="images/rim.svg" class="rim-image" alt="Rim Image" />
+
+    <!-- logo -->
+    <img src="images/logo.svg" alt="Logo" class="logo" />
+
+    <!-- top right icons -->
+    <div class="top-right-icons">
+        <img src="icons/heart.png" alt="Favorite" class="icon" />
+        <img src="icons/menu.png" alt="Menu" class="icon" id="menu-icon" />
+    </div>
+
+    <!-- menu bar -->
+    <div id="menu-bar">
+        <div class="menu-content">
+            <a href="recipes.html" class="menu-item">RECIPES</a>
+            <div class="sub-menu">
+                <a href="have-a-bite.html" class="sub-item">HAVE A BITE</a>
+                <a href="have-a-sip.html" class="sub-item">HAVE A SIP</a>
+            </div>
+            <a href="about.html" class="menu-item">ABOUT</a>
+        </div>
+
+        <!-- back to homepage button -->
+        <img src="icons/home.png" id="home-icon" alt="Home">
+
+        <!-- cancel button -->
+        <img src="icons/cancel.png" alt="Close Menu" class="icon" id="close-menu" style="color:#F4D760;;">
+
+        <!-- menu content -->
+        <div class="menu-content">
+            <a href="recipes.html" class="menu-item">RECIPES</a>
+            <div class="sub-menu">
+                <a href="have-a-bite.html" class="sub-item">HAVE A BITE</a>
+                <a href="have-a-sip.html" class="sub-item">HAVE A SIP</a>
+            </div>
+            <a href="about.html" class="menu-item">ABOUT</a>
+        </div>
+
+        <!-- menu bottom + social icons -->
+        <div class="menu-bottom">
+            <span class="keep-in-touch">will we keep in touch?</span>
+            <div class="social-icons">
+                <img src="icons/ig.png" alt="Social 1" class="social-icon-1">
+                <img src="icons/youtube.png" alt="Social 2" class="social-icon-2">
+            </div>
+        </div>
+    </div>
+
+
+    <div style="height: 100vh;">
+        <div class="inner-line inner-line-left"></div>
+        <div class="middle-left-text">HAVE A BITE</div>
+        <div class="bottom-left-text">Recipes for your home brunch and comfort food. </div>
+    </div>
+
+    <div class="polaroid-container">
+        <!-- pair 1 -->
+        <div class="polaroid polaroid1">
+            <a href="vietnamese-beef-stew.html">
+                <img src="images/vietbeefstew.png" alt="Placeholder" />
+            </a>
+        </div>
+        <div class="info-box info1">
+            <strong>Name</strong><br />
+            <em>Level of Difficulty</em><br />
+            <div class="stars">★★★☆☆</div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+
+        <!-- pair 2 -->
+        <div class="polaroid polaroid2">
+            <img src="images/sip.png" alt="Placeholder" />
+        </div>
+        <div class="info-box info2">
+            <strong>Name</strong><br />
+            <div class="stars">★★★☆☆</div>
+            <em>Level of Difficulty</em><br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+
+        <!-- pair 3 -->
+        <div class="polaroid polaroid3">
+            <img src="images/sip.png" alt="Placeholder" />
+        </div>
+        <div class="info-box info3">
+            <strong>Name</strong><br />
+            <div class="stars">★★★☆☆</div>
+            <em>Level of Difficulty</em><br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+
+        <!-- pair 4 -->
+        <div class="polaroid polaroid4">
+            <img src="images/sip.png" alt="Placeholder" />
+        </div>
+        <div class="info-box info4">
+            <strong>Name</strong><br />
+            <div class="stars">★★★☆☆</div>
+            <em>Level of Difficulty</em><br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+
+        <!-- text-only pair -->
+        <div class="polaroid polaroid5">
+            <img src="images/sip.png" alt="Placeholder" />
+        </div>
+        <div class="info-box info5">
+            <strong>Name</strong><br />
+            <div class="stars">★★★☆☆</div>
+            <em>Level of Difficulty</em><br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+    </div>
+
+    <div class="music-bar">
+        <img id="song-avatar" src="images/default-avatar.png" alt="Song Avatar">
+        <div class="music-info">
+            <p class="song-name">Song Name</p>
+            <p class="song-artist">Artist Name</p>
+        </div>
+        <input type="range" id="progress-bar" value="0">
+        <div class="volume-container">
+            <img src="icons/volume.png" alt="Volume" id="volume-icon">
+            <div id="volume-bar"> </div>
+            <input type="range" id="volume-slider" min="0" max="100" step="1">
+        </div>
+        <div style="flex-direction: row; display: flex;">
+            <button id="prev-btn"><img src="icons/previous.png" alt=""></button>
+            <button id="play-pause-btn"><img src="icons/play.png" alt="" id="play-pause-icon"></button>
+            <button id="next-btn"><img src="icons/next.png" alt=""></button>
+        </div>
+        <audio id="background-music"></audio>
+    </div>
+
+
+</body>
+
+</html>

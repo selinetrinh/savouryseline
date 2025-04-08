@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>savouryseline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: #F4EFE8;">
+
+
+    <script src="songScript.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- garnished rim -->
+    <img src="images/rim.svg" class="rim-image" alt="Rim Image" />
+
+    <!-- logo -->
+    <img src="images/logo.svg" alt="Logo" class="logo" />
+
+    <!-- top right icons -->
+    <div class="top-right-icons">
+        <img src="icons/heart.png" alt="Favorite" class="icon" />
+        <img src="icons/menu.png" alt="Menu" class="icon" id="menu-icon" />
+    </div>
+
+    <!-- menu bar -->
+    <div id="menu-bar">
+        <div class="menu-content">
+            <a href="recipes.html" class="menu-item">RECIPES</a>
+            <div class="sub-menu">
+                <a href="have-a-bite.html" class="sub-item">HAVE A BITE</a>
+                <a href="have-a-sip.html" class="sub-item">HAVE A SIP</a>
+            </div>
+            <a href="about.html" class="menu-item">ABOUT</a>
+        </div>
+
+        <!-- back to homepage button -->
+        <img src="icons/home.png" id="home-icon" alt="Home">
+
+        <!-- cancel button -->
+        <img src="icons/cancel.png" alt="Close Menu" class="icon" id="close-menu" style="color:#F4D760;;">
+
+        <!-- menu content -->
+        <div class="menu-content">
+            <a href="recipes.html" class="menu-item">RECIPES</a>
+            <div class="sub-menu">
+                <a href="have-a-bite.html" class="sub-item">HAVE A BITE</a>
+                <a href="have-a-sip.html" class="sub-item">HAVE A SIP</a>
+            </div>
+            <a href="about.html" class="menu-item">ABOUT</a>
+        </div>
+
+        <!-- menu bottom + social icons -->
+        <div class="menu-bottom">
+            <span class="keep-in-touch">will we keep in touch?</span>
+            <div class="social-icons">
+                <img src="icons/ig.png" alt="Social 1" class="social-icon-1">
+                <img src="icons/youtube.png" alt="Social 2" class="social-icon-2">
+            </div>
+        </div>
+    </div>
+
+    <div class="food-container">
+        <div style="height: 30vh;"></div>
+        <h1 class="food-title">Vietnamese Beef Stew</h1>
+        <div class="food-difficulty">
+            Level Of Difficulties:
+            <span class="food-stars">
+        <span class="filled">★</span>
+            <span class="filled">★</span>
+            <span>★</span>
+            </span>
+        </div>
+
+        <div class="food-image">
+            <img src="images/haveabite.jpg" alt="Vietnamese Beef Stew" />
+        </div>
+
+        <div class="food-main-content">
+            <div class="food-left-column">
+                <div class="food-yellow-box">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                    </ul>
+                </div>
+
+                <div class="food-yellow-box">
+                    <h3>Instructions</h3>
+                    <ul>
+                        <li>Sample</li>
+                        <li>Sample</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="food-video-section">
+                TUTORIAL VIDEO
+            </div>
+        </div>
+
+        <div class="food-note">
+            <strong>NOTE:</strong><br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+    </div>
+
+    <div class="music-bar">
+        <img id="song-avatar" src="images/default-avatar.png" alt="Song Avatar">
+        <div class="music-info">
+            <p class="song-name">Song Name</p>
+            <p class="song-artist">Artist Name</p>
+        </div>
+        <input type="range" id="progress-bar" value="0">
+        <div class="volume-container">
+            <img src="icons/volume.png" alt="Volume" id="volume-icon">
+            <div id="volume-bar"> </div>
+            <input type="range" id="volume-slider" min="0" max="100" step="1">
+        </div>
+        <div style="flex-direction: row; display: flex;">
+            <button id="prev-btn"><img src="icons/previous.png" alt=""></button>
+            <button id="play-pause-btn"><img src="icons/play.png" alt="" id="play-pause-icon"></button>
+            <button id="next-btn"><img src="icons/next.png" alt=""></button>
+        </div>
+        <audio id="background-music"></audio>
+    </div>
+
+
+</body>
+
+</html>
