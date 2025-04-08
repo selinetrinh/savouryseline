@@ -451,16 +451,27 @@
     background-repeat: no-repeat;
 }
 
+.have-a-bite-bg {
+    position: absolute;
+    filter: brightness(0.7);
+    /* Adjust the value as needed */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
 .inner-line {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2px;
+    width: 1px;
     background-color: white;
 }
 
 .inner-line-left {
-    left: 10%;
+    left: 10.5%;
     top: 50%;
     bottom: 10%;
 }
@@ -482,7 +493,7 @@
     transform: translateY(-50%);
     font-size: 20px;
     font-family: 'ZT Formom', sans-serif;
-    color: #FFF1C2;
+    color: #ffffff;
 }
 
 .polaroid-container {
@@ -493,7 +504,7 @@
     align-items: center;
     width: 100vw;
     gap: 20vh;
-    margin-top: 40vh;
+    margin-top: 20vh;
 }
 
 .polaroid {
@@ -519,7 +530,8 @@
 .info-box {
     background: white;
     padding: 10px;
-    max-width: 150px;
+    max-width: 300px;
+    max-height: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 12px;
 }
@@ -530,14 +542,16 @@
 }
 
 .polaroid1 {
-    top: 5%;
-    left: 20%;
+    top: 0;
+    left: 10%;
+    width: 380px;
     --rotate: -15deg;
 }
 
 .info1 {
-    top: 15%;
-    left: 30%;
+    top: 5%;
+    left: 20%;
+    rotate: 15deg;
 }
 
 .polaroid2 {
@@ -549,6 +563,7 @@
 .info2 {
     top: 40%;
     left: 50%;
+    rotate: -15deg;
 }
 
 .polaroid3 {
@@ -560,6 +575,7 @@
 .info3 {
     top: 60%;
     left: 30%;
+    rotate: 15deg;
 }
 
 .polaroid4 {
@@ -571,6 +587,7 @@
 .info4 {
     top: 60%;
     left: 55%;
+    rotate: -15deg;
 }
 
 .polaroid5 {
@@ -582,6 +599,60 @@
 .info5 {
     top: 50%;
     left: 40%;
+    rotate: 15deg;
+}
+
+
+/* polaroid animation */
+
+.polaroid img {
+    transition: transform 0.3s ease;
+}
+
+.polaroid1:hover img {
+    transform: scale(1.05) rotate(20deg);
+}
+
+
+/* info animation */
+
+.info1 {
+    transition: transform 0.3s ease;
+}
+
+.info1:hover {
+    transform: scale(1.03) rotate(-20deg);
+}
+
+
+/* polaroid and info animation */
+
+.polaroid1,
+.polaroid2,
+.polaroid3,
+.polaroid4,
+.polaroid5 {
+    transition: transform 0.3s ease;
+}
+
+.info1:hover~.polaroid1 {
+    transform: scale(1.05) rotate(20deg);
+}
+
+.info2:hover~.polaroid2 {
+    transform: scale(1.05) rotate(-20deg);
+}
+
+.info3:hover~.polaroid3 {
+    transform: scale(1.05) rotate(20deg);
+}
+
+.info4:hover~.polaroid4 {
+    transform: scale(1.05) rotate(-20deg);
+}
+
+.info5:hover~.polaroid5 {
+    transform: scale(1.05) rotate(20deg);
 }
 
 
