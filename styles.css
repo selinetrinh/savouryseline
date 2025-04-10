@@ -549,9 +549,9 @@
 }
 
 .info1 {
-    top: 5%;
-    left: 20%;
-    rotate: 15deg;
+    top: 10%;
+    left: 0;
+    rotate: 10deg;
 }
 
 .polaroid2 {
@@ -798,18 +798,17 @@ button {
 
 .food-video-section {
     flex: 2 1 400px;
-    background-color: #555;
+    background-color: transparent;
     border-radius: 4px;
     min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #eee;
+    color: transparent;
     font-size: 14px;
     text-align: center;
     padding: 20px;
     border-radius: 1rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .food-note {
