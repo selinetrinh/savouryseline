@@ -952,13 +952,13 @@ button {
         width: 100%;
     }
     .mobile-bite-image {
-        margin-top: -200px;
+        margin-top: -100px;
         width: 60%;
         height: auto;
         object-fit: contain;
     }
     .mobile-sip-image {
-        margin-top: -250px;
+        margin-top: -180px;
         width: 80%;
         height: auto;
         object-fit: contain;
