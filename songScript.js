@@ -1,83 +1,70 @@
-// Music Playlist
-document.addEventListener("DOMContentLoaded", function() {
-    loadSong(0);
-});
+document.querySelectorAll('.music-player').forEach(player => {
+    const trackName = player.dataset.track;
+    const src = player.dataset.src;
 
-const songs = [
-    { name: "At The Beach", src: "music/waves.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "Coffee Shop", src: "music/cafeshop.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "Rainy Days", src: "music/rain.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "In The Garden", src: "music/birdschirping.mp3", avatar: "music/AfterHours_avatar.png" },
-]
+    // Create audio element
+    const audio = new Audio(src);
+    audio.loop = true;
+    audio.volume = 0;
+    audio.muted = true;
 
-let currentSongIndex = 0;
-const audio = document.getElementById("background-music");
-const playBtn = document.getElementById("play-pause-btn");
-const playPauseIcon = document.getElementById("play-pause-icon");
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
-const progressBar = document.getElementById("progress-bar");
-const volumeIcon = document.getElementById("volume-icon");
-const songName = document.querySelector(".song-name");
-const songArtist = document.querySelector(".song-artist");
-const songAvatar = document.getElementById("song-avatar");
-
-// Load a Song
-function loadSong(index) {
-    const song = songs[index];
-    audio.src = song.src;
-    songName.textContent = song.name;
-    songArtist.textContent = song.artist;
-    songAvatar.src = song.avatar;
-    audio.play();
-    playPauseIcon.src = "icons/play.png";
-}
-
-// Play / Pause Button
-playBtn.addEventListener("click", function() {
-    if (audio.paused) {
-        audio.play();
-        playPauseIcon.src = "icons/pause.png"; // Change to pause icon
-    } else {
-        audio.pause();
-        playPauseIcon.src = "icons/play.png"; // Change back to play icon
+    function tryPlay() {
+        audio.play().then(() => {
+            audio.muted = false; // allow actual volume control
+        }).catch(err => {
+            console.warn('Autoplay still blocked:', err.message);
+        });
     }
-});
 
-// Next Song
-nextBtn.addEventListener("click", function() {
-    currentSongIndex = (currentSongIndex + 1) % songs.length;
-    loadSong(currentSongIndex);
-});
+    tryPlay();
 
-// Previous Song
-prevBtn.addEventListener("click", function() {
-    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-    loadSong(currentSongIndex);
-});
+    // Also fallback if play failed — retry on user interaction
+    window.addEventListener('click', tryPlay, { once: true });
 
-// Update Progress Bar
-audio.addEventListener("timeupdate", function() {
-    if (!isNaN(audio.duration)) {
-        progressBar.value = (audio.currentTime / audio.duration) * 100;
-    }
-});
+    // Add track name
+    const nameEl = document.createElement('div');
+    nameEl.className = 'track-name';
+    nameEl.textContent = trackName;
+    player.appendChild(nameEl);
 
-// Seek Audio
-progressBar.addEventListener("input", function() {
-    audio.currentTime = (progressBar.value / 100) * audio.duration;
-});
+    // Create volume bar
+    const bar = document.createElement('div');
+    bar.className = 'volume-bar';
 
-// Volume Slider
-const volumeSlider = document.getElementById("volume-slider"); // Ensure this exists in your HTML
+    const handle = document.createElement('div');
+    handle.className = 'volume-handle';
+    handle.style.left = `${audio.volume * 234 - 5}px`;
 
-volumeIcon.addEventListener("click", function() {
-    volumeBar.style.display = volumeBar.style.display === "block" ? "none" : "block";
-});
+    bar.appendChild(handle);
+    player.appendChild(bar);
 
-// Adjust Audio Volume
-volumeSlider.addEventListener("input", function() {
-    let volumeValue = volumeSlider.value / 100; // Convert 0-100 range to 0.0-1.0
-    audio.volume = volumeValue;
-    volumeFill.style.height = (volumeValue * 100) + "%"; // Adjust fill height
+    // Volume change logic
+    bar.addEventListener('click', (e) => {
+        const rect = bar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const volume = Math.min(Math.max(clickX / 234, 0), 1);
+        audio.volume = volume;
+        handle.style.left = `${volume * 234 - 5}px`;
+    });
+
+    // Drag handle
+    handle.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        const onMouseMove = (e) => {
+            const rect = bar.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            x = Math.max(0, Math.min(x, 234));
+            const volume = x / 234;
+            audio.volume = volume;
+            handle.style.left = `${x - 5}px`;
+        };
+
+        const onMouseUp = () => {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+        };
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+    });
 });

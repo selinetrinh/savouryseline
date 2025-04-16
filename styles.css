@@ -704,162 +704,71 @@
 /* music radio */
 
 .music-bar {
-    margin-top: 30vh;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 15vh;
-    background-color: rgba(0, 0, 0, 0.361);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
-    border-radius: 0px 0px 0 0;
-    color: #FFFFFF;
-    font-family: 'ZT Formom', sans-serif;
-}
-
-#song-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 0;
-    margin-right: 20px;
-}
-
-.music-info {
-    flex: 1;
-    text-align: left;
-}
-
-.song-name {
-    font-size: 24px;
-    font-family: 'zt-formom';
-}
-
-.song-artist {
-    font-size: 18px;
-    opacity: 0.8;
-    font-family: 'zt-formom';
-}
-
-#progress-bar {
     position: relative;
-    display: flex;
-    flex: 4;
-    width: 50vw;
-    height: 5px;
-    margin: 0 20px;
-}
-
-.volume-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-#volume-icon {
-    width: 80px;
-    height: auto;
-}
-
-button {
-    position: relative;
-    display: flex;
-    background: none;
-    border: none;
-    color: #000000;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.food-container {
-    width: 100vw;
-    height: auto;
-    margin: auto;
-}
-
-.food-title {
-    font-size: 50px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.food-difficulty {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.food-stars {
-    color: black;
-}
-
-.food-stars span.filled {
-    color: black;
-}
-
-.food-image img {
+    /* or remove entirely */
+    bottom: -200px;
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    border-radius: 1rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.food-main-content {
+    height: 8vw;
     display: flex;
-    gap: 20px;
-    align-items: stretch;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
+    background: #609569;
+    box-sizing: border-box;
+    border-top: 2px solid #444;
 }
 
-.food-left-column {
-    flex: 1 1 280px;
+.music-text {
+    position: relative;
+    font-family: 'Zt Formom', sans-serif;
+    font-size: 40px;
+    line-height: 110px;
+    color: #609569;
+    max-width: 50%;
+}
+
+.music-players {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.music-player {
+    width: 278px;
+    height: 75px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.food-yellow-box {
-    background-color: #ffe370;
-    padding: 15px;
-    border-radius: 4px;
-    border-radius: 1rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.food-yellow-box h3 {
-    margin-top: 0;
-    font-size: 16px;
-    text-transform: uppercase;
+.track-name {
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
-.food-yellow-box ul {
-    padding-left: 20px;
-    margin: 0;
+.volume-bar {
+    position: relative;
+    width: 234px;
+    height: 3px;
+    background: black;
+    cursor: pointer;
 }
 
-.food-video-section {
-    flex: 2 1 400px;
-    background-color: transparent;
-    border-radius: 4px;
-    min-height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: transparent;
-    font-size: 14px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 1rem;
-}
-
-.food-note {
-    margin-top: 15px;
-    font-size: 12px;
-    color: #333;
+.volume-handle {
+    position: absolute;
+    top: -8px;
+    width: 10px;
+    height: 20px;
+    background: #FFF1C2;
+    border: 2px solid black;
+    cursor: pointer;
 }
 
 
