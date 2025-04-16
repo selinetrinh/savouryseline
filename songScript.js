@@ -4,14 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const songs = [
-    { name: "After Hours", artist: "N/A", src: "music/AfterHours.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "In The Moment", artist: "N/A", src: "music/InTheMoment.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "European Medley", artist: "N/A", src: "music/EuropeanMedley.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "Going Up", artist: "N/A", src: "music/GoingUp.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "Funtown", artist: "N/A", src: "music/Funtown.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "Smoove Groove", artist: "N/A", src: "music/SmooveGroove.mp3", avatar: "music/AfterHours_avatar.png" },
-    { name: "Moon Temple", artist: "N/A", src: "music/TempleOfTheMoon.mp3", avatar: "music/AfterHours_avatar.png" },
-];
+    { name: "At The Beach", src: "music/waves.mp3", avatar: "music/AfterHours_avatar.png" },
+    { name: "Coffee Shop", src: "music/cafeshop.mp3", avatar: "music/AfterHours_avatar.png" },
+    { name: "Rainy Days", src: "music/rain.mp3", avatar: "music/AfterHours_avatar.png" },
+    { name: "In The Garden", src: "music/birdschirping.mp3", avatar: "music/AfterHours_avatar.png" },
+]
 
 let currentSongIndex = 0;
 const audio = document.getElementById("background-music");
