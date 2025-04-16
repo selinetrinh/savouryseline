@@ -269,20 +269,20 @@
 
 .recipes-text {
     position: absolute;
-    bottom: 0px;
-    right: 40px;
+    bottom: 52vh;
+    left: 4vw;
     font-family: 'ZT Formom', sans-serif;
-    font-size: 170px;
+    font-size: 5.2vw;
     text-transform: uppercase;
-    color: #609569;
-    -webkit-text-stroke: 2px #F4EFE8;
+    color: #F4EFE8;
+    /* -webkit-text-stroke: 2px #F4EFE8; */
     letter-spacing: 2px;
 }
 
 .bite-nav-button {
     position: absolute;
     left: 2%;
-    top: 45%;
+    top: 58%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -310,7 +310,7 @@
 .sip-nav-button {
     position: absolute;
     left: 2%;
-    top: 60%;
+    top: 70%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -347,11 +347,11 @@
 
 .bite-image {
     position: fixed;
-    right: 20vw;
-    top: 50%;
+    right: 12vw;
+    top: 63%;
     transform: translateY(-50%);
-    height: 90vh;
-    width: auto;
+    height: auto;
+    width: 27vw;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -361,16 +361,16 @@
 
 .sip-image {
     position: fixed;
-    left: 20vw;
+    left: 26vw;
     top: 50%;
     transform: translateY(-50%);
-    height: 120vh;
-    width: auto;
+    height: auto;
+    width: 38vw;
     transition: transform 0.3s ease-in-out;
 }
 
 .sip-nav-button:hover+#sip-img {
-    transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(30deg);
 }
 
 .about-page {
@@ -932,7 +932,15 @@ button {
         display: none;
     }
     .recipes-text {
-        display: none;
+        position: absolute;
+        bottom: 57vh;
+        left: 25vw;
+        font-family: 'ZT Formom', sans-serif;
+        font-size: 13vw;
+        text-transform: uppercase;
+        color: #F4EFE8;
+        /* -webkit-text-stroke: 2px #F4EFE8; */
+        letter-spacing: 2px;
     }
     .mobile-spacer {
         height: 50vh;
