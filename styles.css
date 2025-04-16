@@ -336,12 +336,12 @@
 }
 
 .bite-nav-button:hover {
-    background-color: #609569;
+    background-color: #F4D760;
     color: #FFF4E4;
 }
 
 .sip-nav-button:hover {
-    background-color: #609569;
+    background-color: #F4D760;
     color: #FFF4E4;
 }
 
@@ -375,7 +375,11 @@
 
 .about-page {
     margin: 0;
-    background-image: url('images/about_bg.jpg');
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url('images/about_seline.jpg');
     background-size: cover;
     background-position: center calc(50% - 10vw);
     background-attachment: fixed;
@@ -387,7 +391,7 @@
 }
 
 .container {
-    height: 200vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -396,7 +400,8 @@
 
 .wrapper {
     position: relative;
-    top: -200px;
+    top: 0px;
+    bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -429,15 +434,20 @@
 
 .about-social-icons {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 2vh;
+    left: 2vw;
     display: flex;
     align-items: center;
 }
 
-.about-social-icon-1,
-.about-social-icon-2 {
+.about-social-icon-1 {
     width: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.about-social-icon-2 {
+    width: 57px;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -450,23 +460,50 @@
     transform: scale(1.1);
 }
 
-.have-a-bite-page {
-    margin: 0;
-    background-image: url('images/haveabite.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
+
+/* have a bite */
 
 .have-a-bite-bg {
     position: absolute;
-    filter: brightness(0.7);
-    /* Adjust the value as needed */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    object-fit: cover;
     z-index: -1;
+    filter: brightness(0.5);
+}
+
+
+/* back to recipes button */
+
+.back-to-recipes-btn {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    width: 120px;
+    height: 5vh;
+    border: 2px solid #FFF1C2;
+    background-color: transparent;
+    color: #FFF1C2;
+    font-family: 'ZT Formom', sans-serif;
+    font-size: 18px;
+    border-radius: 34px;
+    text-align: center;
+    line-height: 39px;
+    text-decoration: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 997;
+}
+
+
+/* Hover effect */
+
+.back-to-recipes-btn:hover {
+    background-color: #609569;
+    /* or a contrasting color that fits your palette */
+    opacity: 1;
 }
 
 .inner-line {
@@ -474,18 +511,18 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: white;
+    background-color: #FFF1C2;
 }
 
 .inner-line-left {
     left: 10.5%;
-    top: 50%;
+    top: 65%;
     bottom: 10%;
 }
 
 .middle-left-text {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 10%;
     transform: translateY(-50%);
     font-size: 150px;
@@ -498,9 +535,9 @@
     bottom: 2%;
     left: 10%;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 2.1vw;
     font-family: 'ZT Formom', sans-serif;
-    color: #ffffff;
+    color: #FFF1C2;
 }
 
 .polaroid-container {
@@ -825,12 +862,6 @@ button {
     color: #333;
 }
 
-.have-a-bite-bg {
-    width: 100vw;
-    z-index: 0;
-    position: absolute;
-}
-
 
 /* mobile view */
 
@@ -913,7 +944,7 @@ button {
         width: 100%;
     }
     .mobile-bite-image {
-        margin-top: -250px;
+        margin-top: -200px;
         width: 60%;
         height: auto;
         object-fit: contain;
@@ -924,14 +955,33 @@ button {
         height: auto;
         object-fit: contain;
     }
+    .mobile-adjust-height {
+        height: 50vh;
+    }
     .middle-left-text {
         font-size: 60px;
         top: 25%;
     }
     .inner-line-left {
         left: 10%;
+        top: 35vh;
+        bottom: 52vh;
+    }
+    .back-to-recipes-btn {
+        position: absolute;
         top: 30%;
-        bottom: 10%;
+        left: 10%;
+        width: 70px;
+        height: 27px;
+        font-size: 10px;
+        line-height: 28px;
+    }
+    .bottom-left-text {
+        top: 63vh;
+        left: 10%;
+    }
+    .polaroid-container {
+        margin-top: -40vh;
     }
     .polaroid1,
     .info1,
@@ -996,8 +1046,12 @@ button {
         min-height: 250px;
     }
     .have-a-bite-bg {
-        height: 100vh;
+        height: 50vh;
+        width: auto;
         z-index: 0;
         position: absolute;
+    }
+    .about-page {
+        background-position: unset !important;
     }
 }
