@@ -1,3 +1,5 @@
+const allAudio = [];
+
 document.querySelectorAll('.music-player').forEach(player => {
     const trackName = player.dataset.track;
     const src = player.dataset.src;
@@ -7,10 +9,11 @@ document.querySelectorAll('.music-player').forEach(player => {
     audio.loop = true;
     audio.volume = 0;
     audio.muted = true;
+    allAudio.push(audio);
 
     function tryPlay() {
         audio.play().then(() => {
-            audio.muted = false; // allow actual volume control
+            audio.muted = false;
         }).catch(err => {
             console.warn('Autoplay still blocked:', err.message);
         });
@@ -18,7 +21,6 @@ document.querySelectorAll('.music-player').forEach(player => {
 
     tryPlay();
 
-    // Retry on user interaction
     window.addEventListener('click', tryPlay, { once: true });
 
     // Add track name
@@ -33,51 +35,45 @@ document.querySelectorAll('.music-player').forEach(player => {
 
     const handle = document.createElement('div');
     handle.className = 'volume-handle';
-    handle.style.left = `${audio.volume * 234 - 5}px`;
-
+    handle.style.left = `-5px`; // start at zero
     bar.appendChild(handle);
     player.appendChild(bar);
 
-    // Store audio reference on player for later control
-    player._audio = audio;
-
-    // Function to stop other players
-    function stopOtherPlayers() {
-        document.querySelectorAll('.music-player').forEach(p => {
-            if (p !== player && p._audio) {
-                p._audio.pause();
-                p._audio.currentTime = 0;
+    function setVolume(volume) {
+        // Pause all others if this volume > 0
+        if (volume > 0) {
+            allAudio.forEach(a => {
+                if (a !== audio) {
+                    a.pause();
+                    a.volume = 0;
+                }
+            });
+            audio.volume = volume;
+            if (audio.paused) {
+                audio.play().catch(() => {}); // in case Safari still blocks
             }
-        });
+        } else {
+            audio.volume = 0;
+            audio.pause();
+        }
+        handle.style.left = `${volume * 234 - 5}px`;
     }
 
-    // Volume change logic
     bar.addEventListener('click', (e) => {
-        stopOtherPlayers();
-
         const rect = bar.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
         const volume = Math.min(Math.max(clickX / 234, 0), 1);
-        audio.volume = volume;
-        audio.muted = false;
-        audio.play();
-        handle.style.left = `${volume * 234 - 5}px`;
+        setVolume(volume);
     });
 
-    // Drag handle
     handle.addEventListener('mousedown', (e) => {
         e.preventDefault();
-        stopOtherPlayers();
-
         const onMouseMove = (e) => {
             const rect = bar.getBoundingClientRect();
             let x = e.clientX - rect.left;
             x = Math.max(0, Math.min(x, 234));
             const volume = x / 234;
-            audio.volume = volume;
-            audio.muted = false;
-            audio.play();
-            handle.style.left = `${x - 5}px`;
+            setVolume(volume);
         };
 
         const onMouseUp = () => {
