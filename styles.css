@@ -605,12 +605,13 @@
 .polaroid2 {
     top: 15%;
     left: 70%;
+    width: 300px;
     --rotate: 12deg;
 }
 
 .info2 {
     top: 40%;
-    left: 50%;
+    right: 50%;
     rotate: -15deg;
 }
 
@@ -626,30 +627,6 @@
     rotate: 15deg;
 }
 
-.polaroid4 {
-    top: 60%;
-    left: 70%;
-    --rotate: 15deg;
-}
-
-.info4 {
-    top: 60%;
-    left: 55%;
-    rotate: -15deg;
-}
-
-.polaroid5 {
-    top: 90%;
-    left: 20%;
-    --rotate: 15deg;
-}
-
-.info5 {
-    top: 50%;
-    left: 40%;
-    rotate: 15deg;
-}
-
 
 /* polaroid animation */
 
@@ -661,6 +638,10 @@
     transform: scale(1.05) rotate(20deg);
 }
 
+.polaroid2:hover img {
+    transform: scale(1.05) rotate(-20deg);
+}
+
 
 /* info animation */
 
@@ -670,6 +651,14 @@
 
 .info1:hover {
     transform: scale(1.03) rotate(-20deg);
+}
+
+.info2 {
+    transition: transform 0.3s ease;
+}
+
+.info2:hover {
+    transform: scale(1.03) rotate(20deg);
 }
 
 
