@@ -18,7 +18,7 @@ document.querySelectorAll('.music-player').forEach(player => {
 
     tryPlay();
 
-    // Also fallback if play failed — retry on user interaction
+    // Retry on user interaction
     window.addEventListener('click', tryPlay, { once: true });
 
     // Add track name
@@ -38,24 +38,45 @@ document.querySelectorAll('.music-player').forEach(player => {
     bar.appendChild(handle);
     player.appendChild(bar);
 
+    // Store audio reference on player for later control
+    player._audio = audio;
+
+    // Function to stop other players
+    function stopOtherPlayers() {
+        document.querySelectorAll('.music-player').forEach(p => {
+            if (p !== player && p._audio) {
+                p._audio.pause();
+                p._audio.currentTime = 0;
+            }
+        });
+    }
+
     // Volume change logic
     bar.addEventListener('click', (e) => {
+        stopOtherPlayers();
+
         const rect = bar.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
         const volume = Math.min(Math.max(clickX / 234, 0), 1);
         audio.volume = volume;
+        audio.muted = false;
+        audio.play();
         handle.style.left = `${volume * 234 - 5}px`;
     });
 
     // Drag handle
     handle.addEventListener('mousedown', (e) => {
         e.preventDefault();
+        stopOtherPlayers();
+
         const onMouseMove = (e) => {
             const rect = bar.getBoundingClientRect();
             let x = e.clientX - rect.left;
             x = Math.max(0, Math.min(x, 234));
             const volume = x / 234;
             audio.volume = volume;
+            audio.muted = false;
+            audio.play();
             handle.style.left = `${x - 5}px`;
         };
 
