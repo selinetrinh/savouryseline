@@ -64,78 +64,80 @@
     </div>
 
     <div class="food-container">
-        <div style="height: 30vh;"></div>
         <h1 class="food-title">Vietnamese Beef Stew</h1>
         <div class="food-difficulty">
             Level Of Difficulties:
             <span class="food-stars">
         <span class="filled">★</span>
             <span class="filled">★</span>
-            <span>★</span>
+            <span class="filled">★</span>
+            <span class="filled">★</span>
+            <span>☆</span>
             </span>
         </div>
-
-
 
         <div class="food-main-content">
             <div class="food-left-column">
                 <div class="food-yellow-box">
                     <h3>Ingredients</h3>
                     <ul>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
-                        <li>Sample</li>
+                        <li>500g beef brisket</li>
+                        <li>50ml red wine</li>
+                        <li>2 tomatoes</li>
+                        <li>70g carrots</li>
+                        <li>10g sweet onion</li>
+                        <li>10g shallots</li>
+                        <li>10g garlic</li>
+                        <li>10g ginger</li>
+                        <li>1 anise star</li>
+                        <li>5g cinnamon</li>
+                        <li>10ml fish sauce</li>
+                        <li>2 tsp chicken powder</li>
+                        <li>1 tsp chili powder</li>
+                        <li>1 tsp black pepper</li>
+                        <li>20g tapioca starch</li>
                     </ul>
                 </div>
 
                 <div class="food-yellow-box">
                     <h3>Instructions</h3>
                     <ul>
-                        <li>Sample</li>
-                        <li>Sample</li>
+                        <li>Cut the beef brisket into 1x1 inch cubes.</li>
+                        <li>Season the beef with sweet onion, shallots, garlic, ginger, anise star, cinnamon, fish sauce, chicken powder, chili powder, black pepper, and a splash of red wine.</li>
+                        <li>Sauté everything until the beef is nicely browned on the outside (like a rich, dark sear).</li>
+                        <li>Blend tomatoes into a liquid and pour that into the pot with the beef. Add about 1 liter of water.</li>
+                        <li>Chop up carrots and potatoes, toss them into the pot, and cook until they're tender.</li>
+                        <li>Mix some tapioca starch with 20ml of water, then stir it into the pot to give the broth that silky texture.</li>
+                        <li>Garnish with fresh cilantro and serve with some crusty bread.</li>
+                        <li>Bon appétit!</li>
+
                     </ul>
                 </div>
             </div>
 
             <div class="food-video-section">
-                <video controls style="width: 50vw; margin-top: 1rem; border-radius: 12px;">
+                <video controls>
                     <source src="videos/vietnamesebeefstew.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
             </div>
         </div>
 
-        <div class="food-note">
+        <!-- <div class="food-note">
             <strong>NOTE:</strong><br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        </div> -->
     </div>
 
     <div class="music-bar">
-        <img id="song-avatar" src="images/default-avatar.png" alt="Song Avatar">
-        <div class="music-info">
-            <p class="song-name">Song Name</p>
-            <p class="song-artist">Artist Name</p>
+        <div class="music-players">
+            <div class="music-player" data-track="sandy beach" data-src="audio/waves.mp3"></div>
+            <div class="music-player" data-track="cafe shop" data-src="audio/cafeshop.mp3"></div>
+            <div class="music-player" data-track="summer days in hanoi" data-src="audio/rain.mp3"></div>
+            <div class="music-player" data-track="mom's garden" data-src="audio/birds.mp3"></div>
+            <div class="music-player" data-track="sunny side up" data-src="audio/breakfast.mp3"></div>
+
+
         </div>
-        <input type="range" id="progress-bar" value="0">
-        <div class="volume-container">
-            <img src="icons/volume.png" alt="Volume" id="volume-icon">
-            <div id="volume-bar"> </div>
-            <input type="range" id="volume-slider" min="0" max="100" step="1">
-        </div>
-        <div style="flex-direction: row; display: flex;">
-            <button id="prev-btn"><img src="icons/previous.png" alt=""></button>
-            <button id="play-pause-btn"><img src="icons/play.png" alt="" id="play-pause-icon"></button>
-            <button id="next-btn"><img src="icons/next.png" alt=""></button>
-        </div>
-        <audio id="background-music"></audio>
-    </div>
 
 
 </body>
