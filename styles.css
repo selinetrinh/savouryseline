@@ -751,9 +751,41 @@
     /* individual recipe page */
     
     .food-container {
+        position: relative;
+        top: 200px;
+    }
+    
+    .back-to-has-btn {
+        position: absolute;
+        top: 7%;
+        right: 10%;
+        width: 150px;
+        height: 5vh;
+        border: 2px solid #000000;
+        background-color: transparent;
+        color: #000000;
+        font-family: 'ZT Formom', sans-serif;
+        font-size: 18px;
+        border-radius: 34px;
+        text-align: center;
+        line-height: 39px;
+        text-decoration: none;
+        opacity: 1;
+        transition: all 0.3s ease;
+        z-index: 997;
+    }
+    
+    .back-to-has-btn:hover {
+        background-color: #FFF1C2;
+        /* or a contrasting color that fits your palette */
+        opacity: 1;
+    }
+    
+    .food-container-sesame {
         /* border: #000000 2px solid; */
         position: relative;
         top: 200px;
+        margin-bottom: 20px;
     }
     
     .food-title {
@@ -1055,6 +1087,25 @@
         }
         .food-left-column {
             width: 100%;
+        }
+        .back-to-has-btn {
+            position: absolute;
+            top: 7%;
+            right: 0;
+            width: 110px;
+            height: 5vh;
+            border: 2px solid #000000;
+            background-color: transparent;
+            color: #000000;
+            font-family: 'ZT Formom', sans-serif;
+            font-size: 13px;
+            border-radius: 34px;
+            text-align: center;
+            line-height: 39px;
+            text-decoration: none;
+            opacity: 1;
+            transition: all 0.3s ease;
+            z-index: 997;
         }
         .food-title {
             font-family: 'ZT Formom', sans-serif;
