@@ -997,6 +997,12 @@
         .polaroid-container {
             margin-top: -40vh;
         }
+        .polaroid1 {
+            top: 0;
+            left: 10%;
+            width: 280px;
+            --rotate: -15deg;
+        }
         .polaroid1,
         .info1,
         .polaroid2,
@@ -1101,6 +1107,7 @@
         .have-a-bite-bg {
             height: 50vh;
             width: auto;
+            max-width: 100vw;
             z-index: 0;
             position: absolute;
         }
