@@ -205,44 +205,6 @@
         align-items: left;
         justify-content: space-between;
     }
-    
-    .keep-in-touch {
-        font-family: 'Mali', sans-serif;
-        font-weight: 500;
-        font-style: italic;
-        font-size: 20px;
-        line-height: 22px;
-        color: #FFFFFF;
-    }
-    
-    .social-icons {
-        display: flex;
-        gap: 10px;
-    }
-    
-    .social-icon-1 {
-        right: 70px;
-        width: 75px;
-        height: 70px;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .social-icon-2 {
-        right: 70px;
-        width: 95px;
-        height: 67px;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .social-icon-1:hover {
-        transform: scale(1.1);
-    }
-    
-    .social-icon-2:hover {
-        transform: scale(1.1);
-    }
     /* garnished rim */
     
     .rim-image {
@@ -426,34 +388,6 @@
     .hidden {
         opacity: 0;
         pointer-events: none;
-    }
-    
-    .about-social-icons {
-        position: fixed;
-        bottom: 2vh;
-        left: 2vw;
-        display: flex;
-        align-items: center;
-    }
-    
-    .about-social-icon-1 {
-        width: 40px;
-        margin-right: 10px;
-        cursor: pointer;
-    }
-    
-    .about-social-icon-2 {
-        width: 57px;
-        margin-right: 10px;
-        cursor: pointer;
-    }
-    
-    .about-social-icon-1:hover {
-        transform: scale(1.1);
-    }
-    
-    .about-social-icon-2:hover {
-        transform: scale(1.1);
     }
     /* have a bite */
     
