@@ -678,9 +678,7 @@
     /* music radio */
     
     .music-bar {
-        /* border: #000 2px solid; */
         position: relative;
-        /* or remove entirely */
         bottom: -200px;
         width: 100%;
         height: 8vw;
@@ -707,7 +705,6 @@
     .music-players {
         display: flex;
         flex-wrap: nowrap;
-        /* Don't wrap on desktop */
         justify-content: flex-end;
         gap: 10px;
         width: 100%;
@@ -754,6 +751,7 @@
     /* individual recipe page */
     
     .food-container {
+        /* border: #000000 2px solid; */
         position: relative;
         top: 200px;
     }
@@ -798,11 +796,12 @@
     }
     
     .food-video-section video {
-        border: #000000 2px solid;
         width: 70%;
         max-width: 100%;
         border-radius: 12px;
         margin-top: 2rem;
+        border: #000000 2px solid;
+        /* black border-like shadow */
     }
     
     .food-yellow-box {
@@ -827,6 +826,48 @@
         margin-bottom: 0.75rem;
         font-size: 14px;
         line-height: 1.6;
+    }
+    /* stickers on individual recipe page */
+    
+    .sticker {
+        position: absolute;
+        z-index: 10;
+        pointer-events: auto;
+        transition: transform 0.3s ease;
+    }
+    
+    .sticker-beef {
+        width: 180px;
+        height: auto;
+        top: 20vh;
+        left: 30vw;
+    }
+    
+    .sticker-tomato {
+        width: 180px;
+        height: auto;
+        top: 78vh;
+        left: 23vw;
+    }
+    
+    .sticker-carrot {
+        width: 150px;
+        height: auto;
+        bottom: 20vh;
+        left: 35vw;
+        rotate: 30deg;
+    }
+    
+    .sticker-wine {
+        width: 320px;
+        height: auto;
+        top: 32vh;
+        left: 13vw;
+        rotate: -10deg;
+    }
+    
+    .sticker:hover {
+        transform: scale(1.2) rotate(20deg);
     }
     /* mobile view */
     
@@ -1006,8 +1047,56 @@
         .food-main-content {
             flex-direction: column;
         }
+        .food-left-column {
+            width: 100%;
+        }
+        .food-title {
+            font-family: 'ZT Formom', sans-serif;
+            font-size: 50px;
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+        .food-difficulty {
+            font-family: 'ZT Formom', sans-serif;
+            font-size: 20px;
+            color: black;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .food-stars {
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+        }
         .food-video-section {
-            min-height: 250px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .sticker-beef {
+            width: 140px;
+            height: auto;
+            top: 20vh;
+            left: 50vw;
+        }
+        .sticker-tomato {
+            width: 140px;
+            height: auto;
+            top: 62vh;
+            left: 64vw;
+        }
+        .sticker-carrot {
+            width: 120px;
+            height: auto;
+            top: 70vh;
+            left: 40vw;
+            rotate: 10deg;
+        }
+        .sticker-wine {
+            width: 250px;
+            height: auto;
+            top: 32vh;
+            left: 27vw;
+            rotate: -10deg;
         }
         .have-a-bite-bg {
             height: 50vh;
