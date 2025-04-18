@@ -2,7 +2,7 @@ document.querySelectorAll('.music-player').forEach(player => {
     const trackName = player.dataset.track;
     const src = player.dataset.src;
 
-    // Create audio element
+    // create music player generator
     const audio = new Audio(src);
     audio.loop = true;
     audio.volume = 0;
@@ -10,7 +10,7 @@ document.querySelectorAll('.music-player').forEach(player => {
 
     function tryPlay() {
         audio.play().then(() => {
-            audio.muted = false; // allow actual volume control
+            audio.muted = false;
         }).catch(err => {
             console.warn('Autoplay still blocked:', err.message);
         });
@@ -18,16 +18,16 @@ document.querySelectorAll('.music-player').forEach(player => {
 
     tryPlay();
 
-    // Also fallback if play failed — retry on user interaction
+    // fallback if play failed — retry on user interaction
     window.addEventListener('click', tryPlay, { once: true });
 
-    // Add track name
+    // add track name
     const nameEl = document.createElement('div');
     nameEl.className = 'track-name';
     nameEl.textContent = trackName;
     player.appendChild(nameEl);
 
-    // Create volume bar
+    // create volume bar
     const bar = document.createElement('div');
     bar.className = 'volume-bar';
 
@@ -38,7 +38,7 @@ document.querySelectorAll('.music-player').forEach(player => {
     bar.appendChild(handle);
     player.appendChild(bar);
 
-    // Volume change logic
+    // volume change logic
     bar.addEventListener('click', (e) => {
         const rect = bar.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
@@ -47,7 +47,7 @@ document.querySelectorAll('.music-player').forEach(player => {
         handle.style.left = `${volume * 234 - 5}px`;
     });
 
-    // Drag handle
+    // drag handle
     handle.addEventListener('mousedown', (e) => {
         e.preventDefault();
         const onMouseMove = (e) => {

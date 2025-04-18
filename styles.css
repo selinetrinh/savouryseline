@@ -215,6 +215,7 @@
         height: auto;
         z-index: 999;
     }
+    /* recipes page */
     
     .recipes-page {
         margin: 0;
@@ -233,7 +234,6 @@
         font-size: 5.2vw;
         text-transform: uppercase;
         color: #F4EFE8;
-        /* -webkit-text-stroke: 2px #F4EFE8; */
         letter-spacing: 2px;
     }
     
@@ -330,6 +330,7 @@
     .sip-nav-button:hover+#sip-img {
         transform: translateY(-50%) rotate(30deg);
     }
+    /* about page */
     
     .about-page {
         margin: 0;
@@ -425,11 +426,9 @@
         transition: all 0.3s ease;
         z-index: 997;
     }
-    /* Hover effect */
     
     .back-to-recipes-btn:hover {
         background-color: #609569;
-        /* or a contrasting color that fits your palette */
         opacity: 1;
     }
     
@@ -550,7 +549,6 @@
         left: 30%;
         rotate: 15deg;
     }
-    /* polaroid animation */
     
     .polaroid img {
         transition: transform 0.3s ease;
@@ -563,7 +561,6 @@
     .polaroid2:hover img {
         transform: scale(1.05) rotate(-20deg);
     }
-    /* info animation */
     
     .info1 {
         transition: transform 0.3s ease;
@@ -580,7 +577,6 @@
     .info2:hover {
         transform: scale(1.03) rotate(20deg);
     }
-    /* polaroid and info animation */
     
     .polaroid1,
     .polaroid2,
@@ -609,7 +605,7 @@
     .info5:hover~.polaroid5 {
         transform: scale(1.05) rotate(20deg);
     }
-    /* music radio */
+    /* music player generator */
     
     .music-bar {
         position: relative;
@@ -631,7 +627,6 @@
         position: relative;
         font-family: 'Zt Formom', sans-serif;
         font-size: 20px;
-        /* line-height: 110px; */
         color: #fff;
         max-width: 50%;
     }
@@ -682,7 +677,6 @@
         border: 2px solid black;
         cursor: pointer;
     }
-    /* individual recipe page */
     
     .food-container {
         position: relative;
@@ -711,12 +705,10 @@
     
     .back-to-has-btn:hover {
         background-color: #FFF1C2;
-        /* or a contrasting color that fits your palette */
         opacity: 1;
     }
     
     .food-container-sesame {
-        /* border: #000000 2px solid; */
         position: relative;
         top: 200px;
         margin-bottom: 20px;
@@ -768,11 +760,9 @@
         border-radius: 12px;
         margin-top: 2rem;
         border: #000000 2px solid;
-        /* black border-like shadow */
     }
     
     .food-yellow-box {
-        /* border: #000000 2px solid; */
         padding: 1.5rem;
         border-radius: 12px;
         line-height: 13px;
@@ -986,7 +976,6 @@
             font-size: 13vw;
             text-transform: uppercase;
             color: #F4EFE8;
-            /* -webkit-text-stroke: 2px #F4EFE8; */
             letter-spacing: 2px;
         }
         .mobile-spacer {

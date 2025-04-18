@@ -5,7 +5,7 @@ document.getElementById("menu-icon").addEventListener("click", function() {
 
 // back to homepage button
 document.getElementById("home-icon").addEventListener("click", function() {
-    window.location.href = "index.html"; // Redirect to the homepage
+    window.location.href = "index.html";
 });
 
 // close menu bar button
