@@ -814,6 +814,7 @@
         justify-content: space-between;
         margin-top: 2rem;
         flex-wrap: wrap;
+        z-index: 10;
     }
     
     .food-left-column {
@@ -843,6 +844,7 @@
         line-height: 13px;
         margin-bottom: 1.5rem;
         font-family: 'mali', sans-serif;
+        z-index: 10;
     }
     
     .food-yellow-box h3 {
@@ -852,18 +854,20 @@
     
     .food-yellow-box ul {
         padding-left: 1.5rem;
+        z-index: 10;
     }
     
     .food-yellow-box li {
         margin-bottom: 0.75rem;
         font-size: 14px;
         line-height: 1.6;
+        z-index: 10;
     }
     /* stickers on individual recipe page */
     
     .sticker {
         position: absolute;
-        z-index: 10;
+        z-index: 9;
         pointer-events: auto;
         transition: transform 0.3s ease;
     }
@@ -896,6 +900,77 @@
         top: 32vh;
         left: 13vw;
         rotate: -10deg;
+    }
+    
+    .sticker-basil {
+        width: 320px;
+        height: auto;
+        top: 25vh;
+        left: 20vw;
+    }
+    
+    .sticker-xeng {
+        width: 400px;
+        height: auto;
+        top: 60vh;
+        left: 23vw;
+    }
+    
+    .sticker-egg {
+        width: 350px;
+        height: auto;
+        bottom: 3vh;
+        left: 20vw;
+    }
+    
+    .sticker-milk {
+        width: 340px;
+        height: auto;
+        top: 28vh;
+        left: 20vw;
+        rotate: 10deg;
+    }
+    
+    .sticker-chasen {
+        width: 500px;
+        height: auto;
+        top: 60vh;
+        left: 28vw;
+    }
+    
+    .sticker-chawan {
+        width: 350px;
+        height: auto;
+        bottom: 5vh;
+        left: 20vw;
+    }
+    
+    .sticker-milk2 {
+        width: 350px;
+        height: auto;
+        top: 46vh;
+        left: 13vw;
+    }
+    
+    .sticker-coffee {
+        width: 300px;
+        height: auto;
+        top: 25vh;
+        left: 25vw;
+    }
+    
+    .sticker-cup {
+        width: 450px;
+        height: auto;
+        bottom: 40vh;
+        left: 22vw;
+    }
+    
+    .sticker-spoon {
+        width: 350px;
+        height: auto;
+        bottom: 5vh;
+        left: 5vw;
     }
     
     .sticker:hover {
@@ -1090,7 +1165,7 @@
         }
         .back-to-has-btn {
             position: absolute;
-            top: 7%;
+            top: 9%;
             right: 0;
             width: 110px;
             height: 5vh;
@@ -1129,31 +1204,8 @@
             width: 100%;
             margin-bottom: 20px;
         }
-        .sticker-beef {
-            width: 140px;
-            height: auto;
-            top: 20vh;
-            left: 50vw;
-        }
-        .sticker-tomato {
-            width: 140px;
-            height: auto;
-            top: 62vh;
-            left: 64vw;
-        }
-        .sticker-carrot {
-            width: 120px;
-            height: auto;
-            top: 70vh;
-            left: 40vw;
-            rotate: 10deg;
-        }
-        .sticker-wine {
-            width: 250px;
-            height: auto;
-            top: 32vh;
-            left: 27vw;
-            rotate: -10deg;
+        .sticker {
+            display: none;
         }
         .have-a-bite-bg {
             height: 50vh;
