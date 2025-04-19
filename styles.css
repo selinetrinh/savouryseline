@@ -402,7 +402,7 @@
         height: 100vh;
         object-fit: cover;
         z-index: -1;
-        filter: brightness(0.5);
+        filter: brightness(0.8);
         box-sizing: border-box;
     }
     /* back to recipes button */
