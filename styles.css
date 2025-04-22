@@ -1004,16 +1004,14 @@
         }
         .middle-left-text {
             font-size: 60px;
-            top: 25%;
+            top: 35%;
         }
         .inner-line-left {
-            left: 10%;
-            top: 35vh;
-            bottom: 56vh;
+            display: none;
         }
         .back-to-recipes-btn {
             position: absolute;
-            top: 30%;
+            top: 40%;
             left: 10%;
             width: 70px;
             height: 27px;
@@ -1021,8 +1019,7 @@
             line-height: 28px;
         }
         .bottom-left-text {
-            top: 63vh;
-            left: 10%;
+            display: none;
         }
         .polaroid-container {
             margin-top: -40vh;
