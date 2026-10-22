@@ -120,10 +120,10 @@
     #menu-bar {
         position: fixed;
         top: 0;
-        right: -50vw;
-        width: 50vw;
+        right: -33.333vw;
+        width: 33.333vw;
         height: 100vh;
-        background-color: #222223;
+        background-color: #FBFBEC;
         transition: right 0.5s ease-in-out;
         box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
         z-index: 1002;
@@ -140,28 +140,38 @@
     
     .menu-item {
         font-family: 'ZT Formom', sans-serif;
-        font-size: 80px;
-        color: #F4D760;
+        font-size: clamp(36px, 3.7vw, 53px);
+        color: #609569;
         text-decoration: none;
-        line-height: 150px;
+        line-height: 100px;
         display: block;
+        transform-origin: left center;
+        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
     }
     
     .sub-menu {
-        padding-left: 60px;
+        padding-left: 40px;
     }
     
     .sub-item {
         font-family: 'ZT Formom', sans-serif;
-        font-size: 50px;
-        color: #FFFFFF;
+        font-size: clamp(24px, 2.3vw, 33px);
+        color: #609569;
         text-decoration: none;
-        line-height: 80px;
+        line-height: 53px;
         display: block;
+        transform-origin: left center;
+        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+
+    .menu-item:hover,
+    .sub-item:hover {
+        transform: scale(1.03);
+        color: #C2694E;
     }
     
     .sub-item:last-child {
-        line-height: 80px;
+        line-height: 53px;
     }
     
     .menu-open {
@@ -176,6 +186,7 @@
         height: 45px;
         cursor: pointer;
         transition: transform 0.2s ease-in-out;
+        filter: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(1515%) hue-rotate(76deg) brightness(91%) contrast(84%);
     }
     
     #home-icon:hover {
@@ -190,6 +201,7 @@
         height: 33px;
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
+        filter: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(1515%) hue-rotate(76deg) brightness(91%) contrast(84%);
     }
     
     #close-menu:hover {
@@ -913,7 +925,7 @@
             right: -100vw;
             width: 100vw;
             height: 100vh;
-            background-color: #222223;
+            background-color: #FBFBEC;
             transition: right 0.5s ease-in-out;
             box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
             z-index: 1001;
@@ -928,7 +940,7 @@
             font-style: italic;
             font-size: 18px;
             line-height: 22px;
-            color: #FFFFFF;
+            color: #609569;
         }
         .menu-bottom {
             left: 5%;
