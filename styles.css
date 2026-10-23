@@ -1002,8 +1002,20 @@
             z-index: 1001;
         }
         .menu-content {
-            top: 15vh;
+            top: calc(15vh + 150px);
             left: calc(5% + 50px);
+        }
+        .menu-item {
+            font-size: clamp(39.6px, 4.07vw, 58.3px);
+            line-height: 110px;
+        }
+        .sub-menu {
+            padding-left: 44px;
+        }
+        .sub-item,
+        .sub-item:last-child {
+            font-size: clamp(26.4px, 2.53vw, 36.3px);
+            line-height: 58.3px;
         }
         .keep-in-touch {
             font-family: 'Mali', sans-serif;
@@ -1018,9 +1030,11 @@
         }
         #home-icon {
             left: calc(5% + 15px);
+            width: 75px;
         }
         #close-menu {
-            right: calc(5% - 30px);
+            right: calc(5% + 15px);
+            width: 60px;
         }
         .nav-buttons {
             flex-direction: column;
