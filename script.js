@@ -19,6 +19,14 @@ closeMenu?.addEventListener("click", function() {
     menuBar?.classList.remove("menu-open");
 });
 
+document.addEventListener("click", function(event) {
+    const clickedOutsideMenu = !menuBar?.contains(event.target) && event.target !== menuIcon;
+
+    if (menuBar?.classList.contains("menu-open") && clickedOutsideMenu) {
+        menuBar.classList.remove("menu-open");
+    }
+});
+
 logo?.addEventListener("click", function() {
     window.location.href = "index.html";
 });
