@@ -167,7 +167,7 @@
     .menu-item:hover,
     .sub-item:hover {
         transform: scale(1.03);
-        color: #C2694E;
+        color: #D9C765;
     }
     
     .sub-item:last-child {
@@ -185,12 +185,13 @@
         width: 45px;
         height: 45px;
         cursor: pointer;
-        transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
         filter: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(1515%) hue-rotate(76deg) brightness(91%) contrast(84%);
     }
     
     #home-icon:hover {
         transform: scale(1.2);
+        filter: brightness(0) saturate(100%) invert(82%) sepia(29%) saturate(686%) hue-rotate(9deg) brightness(91%) contrast(89%);
     }
     
     #close-menu {
@@ -200,12 +201,13 @@
         width: 33px;
         height: 33px;
         cursor: pointer;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
         filter: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(1515%) hue-rotate(76deg) brightness(91%) contrast(84%);
     }
     
     #close-menu:hover {
         transform: scale(1.2);
+        filter: brightness(0) saturate(100%) invert(82%) sepia(29%) saturate(686%) hue-rotate(9deg) brightness(91%) contrast(89%);
     }
     
     .menu-bottom {
