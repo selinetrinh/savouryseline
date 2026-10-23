@@ -45,7 +45,7 @@
     
     .logo {
         position: fixed;
-        top: 0;
+        top: -10px;
         width: 20vw;
         z-index: 1000;
         transition: transform 0.35s ease, opacity 0.35s ease;
@@ -54,8 +54,8 @@
     
     .top-right-icons {
         position: fixed;
-        top: 10%;
-        right: 4%;
+        top: 100px;
+        right: calc(4% - 20px);
         display: flex;
         gap: 5vw;
         z-index: 1000;
@@ -67,6 +67,11 @@
         height: 33px;
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
+    }
+
+    #menu-icon {
+        width: 165px;
+        height: 165px;
     }
     
     .icon:hover {
@@ -957,7 +962,7 @@
             height: auto;
         }
         .top-right-icons {
-            top: clamp(52px, calc(19.5vw - 16px), 97px);
+            top: 100px;
         }
         #menu-bar {
             position: fixed;
