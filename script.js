@@ -4,6 +4,10 @@ const menuBar = document.getElementById("menu-bar");
 const homeIcon = document.getElementById("home-icon");
 const closeMenu = document.getElementById("close-menu");
 const logo = document.querySelector(".logo");
+const biteButton = document.querySelector(".bite-nav-button");
+const biteImages = document.querySelectorAll("#bite-img, #mobile-bite-img");
+const sipButton = document.querySelector(".sip-nav-button");
+const sipImages = document.querySelectorAll("#sip-img, #mobile-sip-img");
 
 menuIcon?.addEventListener("click", function() {
     menuBar?.classList.toggle("menu-open");
@@ -29,6 +33,34 @@ document.addEventListener("click", function(event) {
 
 logo?.addEventListener("click", function() {
     window.location.href = "index.html";
+});
+
+biteImages.forEach(function(image) {
+    image.addEventListener("click", function() {
+        window.location.href = "have-a-bite.html";
+    });
+
+    image.addEventListener("mouseenter", function() {
+        biteButton?.classList.add("image-hovered");
+    });
+
+    image.addEventListener("mouseleave", function() {
+        biteButton?.classList.remove("image-hovered");
+    });
+});
+
+sipImages.forEach(function(image) {
+    image.addEventListener("click", function() {
+        window.location.href = "have-a-sip.html";
+    });
+
+    image.addEventListener("mouseenter", function() {
+        sipButton?.classList.add("image-hovered");
+    });
+
+    image.addEventListener("mouseleave", function() {
+        sipButton?.classList.remove("image-hovered");
+    });
 });
 
 // Hide the header while moving down the page, and reveal it on upward scroll.

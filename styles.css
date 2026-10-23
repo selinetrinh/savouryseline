@@ -342,16 +342,25 @@
         text-decoration: none;
     }
     
-    .bite-nav-button:hover {
+    .bite-nav-button:hover,
+    .bite-nav-button.image-hovered {
         background-color: #F4D760;
         color: #FFF4E4;
         font-style: oblique;
     }
     
-    .sip-nav-button:hover {
+    .sip-nav-button:hover,
+    .sip-nav-button.image-hovered {
         background-color: #F4D760;
         color: #FFF4E4;
         font-style: oblique;
+    }
+
+    #bite-img,
+    #mobile-bite-img,
+    #sip-img,
+    #mobile-sip-img {
+        cursor: pointer;
     }
     
     .bite-image {
@@ -367,6 +376,10 @@
     .bite-nav-button:hover+#bite-img {
         transform: translateY(-50%) rotate(45deg);
     }
+
+    #bite-img:hover {
+        transform: translateY(-50%) rotate(45deg);
+    }
     
     .sip-image {
         position: fixed;
@@ -379,6 +392,10 @@
     }
     
     .sip-nav-button:hover+#sip-img {
+        transform: translateY(-50%) rotate(30deg);
+    }
+
+    #sip-img:hover {
         transform: translateY(-50%) rotate(30deg);
     }
     /* about page */
@@ -1054,6 +1071,10 @@
             width: 60%;
             height: auto;
             object-fit: contain;
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-bite-image:hover {
+            transform: rotate(45deg);
         }
         .mobile-sip-image {
             margin-top: -100px;
@@ -1061,6 +1082,10 @@
             width: 80%;
             height: auto;
             object-fit: contain;
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-sip-image:hover {
+            transform: rotate(30deg);
         }
         .mobile-adjust-height {
             height: 50vh;
