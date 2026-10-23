@@ -282,13 +282,14 @@
         left: 4vw;
         width: 20.8vw;
         height: auto;
+        transform: translateY(-100px);
     }
     
     .bite-nav-button {
         position: absolute;
         left: 2%;
         top: 58%;
-        transform: translateY(-50%);
+        transform: translateY(calc(-50% - 100px));
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -316,8 +317,8 @@
     .sip-nav-button {
         position: absolute;
         left: 2%;
-        top: 70%;
-        transform: translateY(-50%);
+        top: calc(70% + 10px);
+        transform: translateY(calc(-50% - 100px));
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -366,7 +367,7 @@
     .bite-image {
         position: fixed;
         right: 12vw;
-        top: 63%;
+        top: calc(63% - 100px);
         transform: translateY(-50%);
         height: auto;
         width: 27vw;
@@ -384,7 +385,7 @@
     .sip-image {
         position: fixed;
         left: 26vw;
-        top: 50%;
+        top: calc(50% - 100px);
         transform: translateY(-50%);
         height: auto;
         width: 38vw;
@@ -977,12 +978,17 @@
     
     @media (max-width: 768px) {
         .logo {
+            top: 20px;
             width: 40vw;
             max-width: 240px;
             height: auto;
         }
         .top-right-icons {
             top: 30px;
+        }
+        #menu-icon {
+            width: 132px;
+            height: 132px;
         }
         #menu-bar {
             position: fixed;
@@ -1036,12 +1042,14 @@
             margin: 10px 0;
             text-align: center;
             margin: 0 auto;
+            transform: translateY(-50%);
         }
         .sip-nav-button {
             position: static;
             width: 80%;
             margin: 0 auto;
             margin-top: -20px;
+            transform: translateY(-50%);
         }
         .bite-image {
             display: none;
@@ -1057,7 +1065,7 @@
             height: auto;
         }
         .mobile-spacer {
-            height: 50vh;
+            height: calc(50vh - 100px);
         }
         .mobile-recipes-img-nav {
             display: flex;
