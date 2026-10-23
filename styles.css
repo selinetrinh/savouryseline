@@ -380,7 +380,7 @@
         background-repeat: no-repeat;
     }
     
-    #mobile-recipes-img-nav {
+    .mobile-recipes-img-nav {
         display: none;
     }
     
@@ -1008,7 +1008,7 @@
             position: static;
             width: 80%;
             margin: 0 auto;
-            margin-top: 20px;
+            margin-top: -20px;
         }
         .bite-image {
             display: none;
@@ -1030,7 +1030,7 @@
         .mobile-spacer {
             height: 50vh;
         }
-        #mobile-recipes-img-nav {
+        .mobile-recipes-img-nav {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1038,12 +1038,14 @@
         }
         .mobile-bite-image {
             margin-top: -100px;
+            margin-bottom: 20px;
             width: 60%;
             height: auto;
             object-fit: contain;
         }
         .mobile-sip-image {
-            margin-top: -180px;
+            margin-top: -100px;
+            margin-bottom: 20px;
             width: 80%;
             height: auto;
             object-fit: contain;
