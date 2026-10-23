@@ -716,12 +716,15 @@
     .food-container {
         position: relative;
         top: 200px;
+        width: min(1400px, calc(100% - 4vw));
+        margin: 0 auto 20px;
+        box-sizing: border-box;
     }
     
     .back-to-has-btn {
         position: absolute;
         top: 7%;
-        right: 10%;
+        right: 2%;
         width: 150px;
         height: 5vh;
         border: 2px solid #000000;
@@ -746,7 +749,9 @@
     .food-container-sesame {
         position: relative;
         top: 200px;
-        margin-bottom: 20px;
+        width: min(1400px, calc(100% - 4vw));
+        margin: 0 auto 20px;
+        box-sizing: border-box;
     }
     
     .food-title {
@@ -785,7 +790,7 @@
     .food-video-section {
         width: 60%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-start;
     }
     
