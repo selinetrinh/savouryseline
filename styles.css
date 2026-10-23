@@ -1074,9 +1074,10 @@
         .recipes-title-image {
             position: absolute;
             bottom: calc(57vh - 25px);
-            left: 25vw;
-            width: 44vw;
+            left: 6vw;
+            width: 88vw;
             height: auto;
+            transform: translateY(-70px);
         }
         .mobile-spacer {
             height: calc(50vh - 100px);
