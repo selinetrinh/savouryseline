@@ -46,7 +46,7 @@
     .logo {
         position: fixed;
         top: 0;
-        width: 25vw;
+        width: 20vw;
         z-index: 1000;
         transition: transform 0.35s ease, opacity 0.35s ease;
     }
@@ -952,8 +952,8 @@
     
     @media (max-width: 768px) {
         .logo {
-            width: 55vw;
-            max-width: 320px;
+            width: 40vw;
+            max-width: 240px;
             height: auto;
         }
         .top-right-icons {
