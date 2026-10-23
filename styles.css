@@ -276,16 +276,12 @@
         background-repeat: no-repeat;
     }
     
-    .recipes-text {
+    .recipes-title-image {
         position: absolute;
-        bottom: 52vh;
+        bottom: calc(52vh - 25px);
         left: 4vw;
-        font-family: 'ZT Formom', sans-serif;
-        font-size: 4.16vw;
-        text-transform: uppercase;
-        color: #609569;
-        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.65);
-        letter-spacing: 2px;
+        width: 20.8vw;
+        height: auto;
     }
     
     .bite-nav-button {
@@ -1036,16 +1032,12 @@
         .sip-image {
             display: none;
         }
-        .recipes-text {
+        .recipes-title-image {
             position: absolute;
-            bottom: 57vh;
+            bottom: calc(57vh - 25px);
             left: 25vw;
-            font-family: 'ZT Formom', sans-serif;
-            font-size: 10.4vw;
-            text-transform: uppercase;
-            color: #609569;
-            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.65);
-            letter-spacing: 2px;
+            width: 44vw;
+            height: auto;
         }
         .mobile-spacer {
             height: 50vh;
