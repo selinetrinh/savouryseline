@@ -137,9 +137,9 @@
         height: 100vh;
         background-color: #FBFBEC;
         background-image: url('images/AdobeStock_15658970.jpeg');
-        background-size: cover;
-        background-position: center calc(50% - 300px);
-        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center calc(50% - 100px);
+        background-repeat: repeat-y;
         transition: right 0.5s ease-in-out;
         box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
         z-index: 1002;
@@ -148,7 +148,7 @@
     .menu-content {
         position: absolute;
         top: 180px;
-        left: 10%;
+        left: calc(10% + 50px);
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -193,6 +193,13 @@
     .sub-item:last-child {
         line-height: 53px;
     }
+
+    @media (min-width: 769px) {
+        .sub-item:last-child {
+            position: relative;
+            top: 10px;
+        }
+    }
     
     .menu-open {
         right: 0 !important;
@@ -201,33 +208,24 @@
     #home-icon {
         position: absolute;
         top: 70px;
-        left: 10%;
-        width: 45px;
-        height: 45px;
+        left: calc(10% - 15px);
+        width: 135px;
+        height: auto;
         cursor: pointer;
-        transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
-        filter: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(1515%) hue-rotate(76deg) brightness(91%) contrast(84%);
+        transition: transform 0.2s ease-in-out;
     }
     
     #home-icon:hover {
-        transform: scale(1.2);
-        filter: brightness(0) saturate(100%) invert(82%) sepia(29%) saturate(686%) hue-rotate(9deg) brightness(91%) contrast(89%);
+        transform: scale(1.1);
     }
     
     #close-menu {
         position: absolute;
-        top: 70px;
-        right: 70px;
-        width: 33px;
-        height: 33px;
+        top: 80px;
+        right: 40px;
+        width: 99px;
+        height: auto;
         cursor: pointer;
-        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-        filter: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(1515%) hue-rotate(76deg) brightness(91%) contrast(84%);
-    }
-    
-    #close-menu:hover {
-        transform: scale(1.2);
-        filter: brightness(0) saturate(100%) invert(82%) sepia(29%) saturate(686%) hue-rotate(9deg) brightness(91%) contrast(89%);
     }
     
     .menu-bottom {
@@ -986,7 +984,7 @@
         }
         .menu-content {
             top: 15vh;
-            left: 5%;
+            left: calc(5% + 50px);
         }
         .keep-in-touch {
             font-family: 'Mali', sans-serif;
@@ -1000,10 +998,10 @@
             left: 5%;
         }
         #home-icon {
-            left: 5%;
+            left: calc(5% + 15px);
         }
         #close-menu {
-            right: 5%;
+            right: calc(5% - 30px);
         }
         .nav-buttons {
             flex-direction: column;
