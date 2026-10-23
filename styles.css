@@ -948,6 +948,9 @@
             max-width: 320px;
             height: auto;
         }
+        .top-right-icons {
+            top: clamp(52px, calc(19.5vw - 16px), 97px);
+        }
         #menu-bar {
             position: fixed;
             top: 0;
@@ -976,6 +979,9 @@
         }
         #home-icon {
             left: 5%;
+        }
+        #close-menu {
+            right: 5%;
         }
         .nav-buttons {
             flex-direction: column;
