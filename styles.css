@@ -48,6 +48,7 @@
         top: 0;
         width: 25vw;
         z-index: 1000;
+        transition: transform 0.35s ease, opacity 0.35s ease;
     }
     /* menu and add to favourite */
     
@@ -58,6 +59,7 @@
         display: flex;
         gap: 5vw;
         z-index: 1000;
+        transition: transform 0.35s ease, opacity 0.35s ease;
     }
     
     .icon {
@@ -228,6 +230,15 @@
         width: 100vw;
         height: auto;
         z-index: 999;
+        transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+
+    .header-hidden .logo,
+    .header-hidden .rim-image,
+    .header-hidden .top-right-icons {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-120%);
     }
     /* recipes page */
     

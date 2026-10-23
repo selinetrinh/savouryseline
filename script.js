@@ -1,29 +1,52 @@
 // menu toggle
-document.getElementById("menu-icon").addEventListener("click", function() {
-    document.getElementById("menu-bar").classList.toggle("menu-open");
+const menuIcon = document.getElementById("menu-icon");
+const menuBar = document.getElementById("menu-bar");
+const homeIcon = document.getElementById("home-icon");
+const closeMenu = document.getElementById("close-menu");
+
+menuIcon?.addEventListener("click", function() {
+    menuBar?.classList.toggle("menu-open");
 });
 
 // back to homepage button
-document.getElementById("home-icon").addEventListener("click", function() {
+homeIcon?.addEventListener("click", function() {
     window.location.href = "index.html";
 });
 
 // close menu bar button
-document.getElementById("close-menu").addEventListener("click", function() {
-    document.getElementById("menu-bar").classList.remove("menu-open");
+closeMenu?.addEventListener("click", function() {
+    menuBar?.classList.remove("menu-open");
 });
+
+// Hide the header while moving down the page, and reveal it on upward scroll.
+let lastHeaderScrollY = window.scrollY;
+
+window.addEventListener("scroll", function() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= 60) {
+        document.body.classList.remove("header-hidden");
+        lastHeaderScrollY = currentScrollY;
+    } else if (currentScrollY > lastHeaderScrollY + 6) {
+        document.body.classList.add("header-hidden");
+        lastHeaderScrollY = currentScrollY;
+    } else if (currentScrollY < lastHeaderScrollY - 6) {
+        document.body.classList.remove("header-hidden");
+        lastHeaderScrollY = currentScrollY;
+    }
+}, { passive: true });
 
 // letter animation
 const envelope = document.querySelector('img.envelope');
 const letter = document.querySelector('img.letter');
 const cancelBtn = document.getElementById('cancelBtn');
 
-envelope.addEventListener('click', () => {
+envelope?.addEventListener('click', () => {
     letter.classList.remove('hidden');
     letter.classList.add('show');
 });
 
-letter.addEventListener('click', () => {
+letter?.addEventListener('click', () => {
     letter.classList.remove('show');
     letter.classList.add('hidden');
 });
