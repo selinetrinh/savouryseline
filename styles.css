@@ -944,7 +944,9 @@
     
     @media (max-width: 768px) {
         .logo {
-            width: 50vw;
+            width: 55vw;
+            max-width: 320px;
+            height: auto;
         }
         #menu-bar {
             position: fixed;
