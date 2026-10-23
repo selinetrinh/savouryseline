@@ -48,13 +48,18 @@
         top: -10px;
         width: 20vw;
         z-index: 1000;
+        cursor: pointer;
         transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.05);
     }
     /* menu and add to favourite */
     
     .top-right-icons {
         position: fixed;
-        top: 100px;
+        top: 30px;
         right: calc(4% - 20px);
         display: flex;
         gap: 5vw;
@@ -131,6 +136,10 @@
         width: 33.333vw;
         height: 100vh;
         background-color: #FBFBEC;
+        background-image: url('images/AdobeStock_15658970.jpeg');
+        background-size: cover;
+        background-position: center calc(50% - 300px);
+        background-repeat: no-repeat;
         transition: right 0.5s ease-in-out;
         box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
         z-index: 1002;
@@ -962,7 +971,7 @@
             height: auto;
         }
         .top-right-icons {
-            top: 100px;
+            top: 30px;
         }
         #menu-bar {
             position: fixed;

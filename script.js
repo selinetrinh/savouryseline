@@ -3,6 +3,7 @@ const menuIcon = document.getElementById("menu-icon");
 const menuBar = document.getElementById("menu-bar");
 const homeIcon = document.getElementById("home-icon");
 const closeMenu = document.getElementById("close-menu");
+const logo = document.querySelector(".logo");
 
 menuIcon?.addEventListener("click", function() {
     menuBar?.classList.toggle("menu-open");
@@ -16,6 +17,10 @@ homeIcon?.addEventListener("click", function() {
 // close menu bar button
 closeMenu?.addEventListener("click", function() {
     menuBar?.classList.remove("menu-open");
+});
+
+logo?.addEventListener("click", function() {
+    window.location.href = "index.html";
 });
 
 // Hide the header while moving down the page, and reveal it on upward scroll.
