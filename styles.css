@@ -171,6 +171,10 @@
         transform: scale(1.03);
         color: #D9C765;
     }
+
+    .sub-item:hover {
+        font-style: oblique;
+    }
     
     .sub-item:last-child {
         line-height: 53px;
