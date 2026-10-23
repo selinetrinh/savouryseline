@@ -1006,7 +1006,7 @@
             left: calc(5% + 50px);
         }
         .menu-item {
-            font-size: clamp(39.6px, 4.07vw, 58.3px);
+            font-size: clamp(45.54px, 4.6805vw, 67.045px);
             line-height: 110px;
         }
         .sub-menu {
@@ -1014,7 +1014,7 @@
         }
         .sub-item,
         .sub-item:last-child {
-            font-size: clamp(26.4px, 2.53vw, 36.3px);
+            font-size: clamp(30.36px, 2.9095vw, 41.745px);
             line-height: 58.3px;
         }
         .keep-in-touch {
@@ -1030,11 +1030,11 @@
         }
         #home-icon {
             left: calc(5% + 15px);
-            width: 75px;
+            width: 112.5px;
         }
         #close-menu {
             right: calc(5% + 15px);
-            width: 60px;
+            width: 90px;
         }
         .nav-buttons {
             flex-direction: column;
@@ -1077,7 +1077,7 @@
             left: 6vw;
             width: 88vw;
             height: auto;
-            transform: translateY(-70px);
+            transform: translateY(-50px);
         }
         .mobile-spacer {
             height: calc(50vh - 100px);
