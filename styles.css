@@ -498,6 +498,7 @@
     
     .back-to-recipes-btn:hover {
         background-color: #609569;
+        font-style: oblique;
         opacity: 1;
     }
     
@@ -777,6 +778,7 @@
     
     .back-to-has-btn:hover {
         background-color: #FFF1C2;
+        font-style: oblique;
         opacity: 1;
     }
     
