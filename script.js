@@ -95,3 +95,48 @@ letter?.addEventListener('click', () => {
     letter.classList.remove('show');
     letter.classList.add('hidden');
 });
+
+// Let ingredient PNGs on individual recipe pages behave like movable stickers.
+document.querySelectorAll('.sticker').forEach(function(sticker) {
+    let pointerStartX = 0;
+    let pointerStartY = 0;
+    let dragStartX = 0;
+    let dragStartY = 0;
+
+    sticker.addEventListener('dragstart', function(event) {
+        event.preventDefault();
+    });
+
+    sticker.addEventListener('pointerdown', function(event) {
+        if (event.button !== 0 && event.pointerType !== 'touch') return;
+
+        pointerStartX = event.clientX;
+        pointerStartY = event.clientY;
+        dragStartX = Number.parseFloat(sticker.dataset.dragX || '0');
+        dragStartY = Number.parseFloat(sticker.dataset.dragY || '0');
+
+        sticker.setPointerCapture(event.pointerId);
+        sticker.classList.add('is-dragging');
+    });
+
+    sticker.addEventListener('pointermove', function(event) {
+        if (!sticker.hasPointerCapture(event.pointerId)) return;
+
+        const dragX = dragStartX + event.clientX - pointerStartX;
+        const dragY = dragStartY + event.clientY - pointerStartY;
+
+        sticker.dataset.dragX = dragX;
+        sticker.dataset.dragY = dragY;
+        sticker.style.translate = `${dragX}px ${dragY}px`;
+    });
+
+    function stopDragging(event) {
+        sticker.classList.remove('is-dragging');
+        if (sticker.hasPointerCapture(event.pointerId)) {
+            sticker.releasePointerCapture(event.pointerId);
+        }
+    }
+
+    sticker.addEventListener('pointerup', stopDragging);
+    sticker.addEventListener('pointercancel', stopDragging);
+});

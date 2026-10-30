@@ -876,6 +876,16 @@
         z-index: 9;
         pointer-events: auto;
         transition: transform 0.3s ease;
+        cursor: grab;
+        touch-action: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    .sticker.is-dragging {
+        cursor: grabbing;
+        z-index: 10;
     }
     
     .sticker-beef {
